@@ -6,14 +6,50 @@
     <title>Exercicio 3</title>
 </head>
 <body>
+
+    <div>
+        <label for="idValor1">Informe o primeiro valor.</label>
+        <input type="number" id="idValor1" name="nmValor1">
+    </div>
     
+    <div>
+        <label for="idValor2">Informe o segundo valor.</label>
+        <input type="number" id="idValor2" name="nmValor2">
+    </div>
+
+    <input type="button" value="Somar Valores" onclick="pegarValor()">
+
+    <div>
+        <label for="IdSaida">Saida</label>
+        <input type="text" id="idSaida" name="nmSaida">
+    </div>
+
     <script>
-        var num1 = parseInt(prompt("Informa um o primeiro valor!"));
+
+        var valor1 = parseInt(prompt("Informa um o primeiro valor!"));
+        var valor2 = parseInt(prompt("Informa um o segundo valor!"));
+
+        var soma = valor1 + valor2;
+
+        
+        function pegarValor() {
+            let valor1
+            
+            valor1 = document.getElementById("idValor1").value
+            valor2 = document.getElementById("idValor2").value
+
+            console.log("Nome: " + valor1);
+            console.log("Nome: " + valor2);
+            document.getElementById("idSaida").value = "valor 1" + valor1 + "- Valor 2 " + valor2
+        }
+        
+        /*var num1 = parseInt(prompt("Informa um o primeiro valor!"));
         var num2 = parseInt(prompt("Informa um o segundo valor!"));
 
         var soma = num1 + num2;
 
         alert("A soma entre " + num1 + " e " + num2 + " é " + soma + ".");
+        *\
 
     </script>
 
