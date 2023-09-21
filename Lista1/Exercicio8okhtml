@@ -7,10 +7,10 @@
 </head>
 <body>
     <form action="">
-        <label for="idLargura">Largura:</label> <br>
-        <input type="number" id="idLargura" name="nmLargura" step="0.01"> <br> <br>
-        <label for="idAltura">Altura:</label> <br>
-        <input type="number" id="idLargura" name="nmLargura" step="0.01"> <br> <br>
+        <label for="idReal">Reais</label> <br>
+        <input type="number" id="idReal" name="nmMReal" step="0.01"> <br> <br>
+        <label for="idDolar">Dolar Hoje</label> <br>
+        <input type="number" id="idDolar" name="nmDolar" step="0.01"> <br> <br>
         <input type="button" value="Converter" onclick="converter()"> <br>
         <output id="idOut" ></output> <br>
    
@@ -22,16 +22,16 @@
         function converter() {
             // Capturar Entredas
             let reais = Number(document.getElementById("idReal").value)
+            let dolar = Number(document.getElementById("idDolar").value)
             //parseInt parte inteira
             //parsefloat numero com virgula
 
 
             //processamento
-            area = largura * altura
-            let qtdTinta = area/2
+            let dolares = reais/dolar
             
             //Saída
-            document.getElementById("idOut").value = "Reais: "+ reais + " = dolares" + dolares.toFixed(2)
+            document.getElementById("idOut").value = "R$" + reais + " Reais,  equivale a $" + dolares.toFixed(2) + " dolares"
             //document.getElementById("idOut").value = "Reais: "+ reais + " = dolares" + parseInt(dolares)
            
 

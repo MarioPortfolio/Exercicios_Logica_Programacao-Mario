@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista 1 Exercicio 6</title>
+    <title>Lista 1 Exercicio 9</title>
 </head>
 <body>
     <form action="">
-        <label for="idReal">Reais</label> <br>
-        <input type="number" id="idReal" name="nmMReal" step="0.01"> <br> <br>
+        <label for="idLargura">Largura:</label> <br>
+        <input type="number" id="idLargura" name="nmLargura" step="0.01"> <br> <br>
+        <label for="idAltura">Altura:</label> <br>
+        <input type="number" id="idAltura" name="nmLargura" step="0.01"> <br> <br>
         <input type="button" value="Converter" onclick="converter()"> <br>
         <output id="idOut" ></output> <br>
    
@@ -19,16 +21,18 @@
 
         function converter() {
             // Capturar Entredas
-            let reais = Number(document.getElementById("idReal").value)
+            let largura = Number(document.getElementById("idLargura").value)
+            let altura = Number(document.getElementById("idAltura").value)
             //parseInt parte inteira
             //parsefloat numero com virgula
 
 
             //processamento
-            let dolares = reais/3.45
+            area = largura * altura
+            let qtdTinta = area/2
             
             //Saída
-            document.getElementById("idOut").value = "Reais: "+ reais + " = dolares" + dolares.toFixed(2)
+            document.getElementById("idOut").value = "Area: " + area + " m2 - Qtd Tinta: " + qtdTinta + " L."
             //document.getElementById("idOut").value = "Reais: "+ reais + " = dolares" + parseInt(dolares)
            
 
