@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 2 exercicio 3</title>
+</head>
+<body>
+
+    <form action="">
+        
+        <label for="idNumero1">Insira o valor a ser comparado com o número 20:</label>
+        <input type="number" id="idNumero1" name="mnNumero1" step="0.01"> <br><br>
+
+        <input type="button" value="Comparar" onclick="comparar()"><br><br>
+
+        <output id="idOut"></output><br>
+
+    </form>
+
+    <script>
+        //Elabore um algoritmo para Entrar com um número e imprimir uma das mensagens: 
+ 	    //maior do que 20, igual a 20 ou menor do que 20.
+
+        function comparar() {            
+
+        //entrada
+            let numero1 = Number(document.getElementById("idNumero1").value)
+            let out = document.getElementById("idOut")
+            
+        //processamento qual é o maior numero entre num1 e num2
+         
+            if (numero1 > 20) {
+                out.value = "O número " + numero1 + " é maior que 20"
+            } else if (numero1 < 20){
+                out.value = "O número " + numero1 + " é menor que 20"
+            } else {
+                out.value = "O número digitado é 20"
+            }
+
+
+        //saída
+
+        document.getElementById("idOut").value = "O maior numero é " + maiorNum
+
+        }
+    </script>
+ 
+
+
+    
+</body>
+</html>
