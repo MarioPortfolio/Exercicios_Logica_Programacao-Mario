@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 1 Exercicio 5</title>
+    <style>
+        div {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="">
+        <div>
+            <label for="idValor1">Informe o primeiro valor.</label> <br>
+            <input type="number" id="idValor1" name="nmValor1">
+        </div>
+        
+        <div>
+            <input type="button" value="calcular" onclick="calcular()"> <br><br>
+            <output id="idOut"></output>
+        </div>
+    
+    </form>
+
+    <script>
+        function calcular() {
+
+        // Entrada
+            let valor1 = Number(document.getElementById("idValor1").value)
+            
+
+        // Processamento
+
+            let numero1 = Number(document.getElementById("idValor1").value)
+
+            let antecessor = numero1 - 1
+            let sucessor = numero1 + 1
+
+            document.getElementById("idOut").innerText = "O antecessor de " + numero1 + " é: " + antecessor + ", e seu sucessor é: " + sucessor + "."
+
+        // Saída
+            
+
+        }
+    </script>
+    
+</body>
+</html>
