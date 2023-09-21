@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: block;
+            margin: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <div>
+            <label for="idNota1">Nota 1</label>
+            <input type="number" id="idNota1" name="nmNota1" step="0.01"> <br>
+        </div>
+
+        <div>
+            <label for="idNota2">Nota 2</label>
+            <input type="number" id="idNota2" name="nmNota2" step="0.01"> <br>
+        </div>
+
+        <div>
+            <input type="button" value="Calcular" onclick="calcular()"> <br>
+        </div>
+
+        <div>
+            <output id="idOut"></output>
+        </div>
+    </form> 
+
+    <script>
+
+        function calcular() {
+        //entradas
+
+        let nota1 = Number(document.getElementById("idNota1").value)
+        let nota2 = Number(document.getElementById("idNota2").value)
+
+
+        //processamento
+
+        let media = (nota1 + nota2)/2
+        
+
+        //saída
+
+         document.getElementById("idOut").value = "A primeira nota é: " + nota1 + ", sua segunda nota é: " + nota2 + " e sua média é: " + media + "."
+            
+
+        }
+    </script>
+
+
+</body>
+</html>
