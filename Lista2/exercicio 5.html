@@ -34,20 +34,28 @@
             
         //entrada
             let numero1 = Number(document.getElementById("idNumero1").value)
-            let maiorNum
+            let numero2 = Number(document.getElementById("idNumero2").value)
+            let numero3 = Number(document.getElementById("idNumero3").value)
+
+            let out = document.getElementById("idOut").value
+
+            let maiorNumero
             
-        //processamento qual é o maior numero entre num1 e num2
-        // se num1 > num2 entao
-        //     maior = num1  
-        // entao
-        //     maior = num2 
-            if (numero1 > 20) {
-                maiorNum = numero1
-            } else if (numero2 > numero3){
-                maiorNum = numero2
-            } else {
-                maiorNum = numero3
-            }
+        //processamento 
+       
+        if (numero1 < numero2 && numero2 < numero3 && numero1 < numero3){
+            out.value = numero3 + " - " + numero2 + " - " + " - " + numero1   
+
+        } else if ( numero1 > numero2 && numero2 > numero3 && numero1 > numero3){
+            out.value = numero1 + " - " + numero2 + " - " + numero3
+            
+        } else if ( numero1 < numero2 && numero2 > numero3 && numero1 > numero3){
+            out.value = numero2 + " - " + numero1 + " - " + numero3
+
+        } else if ( numero1 > numero2 && numero2 < numero3 && numero1 > numero3){
+            out.value = numero1 + " - " + numero3 + " - " + numero2
+            
+        }
 
 
         //saída
