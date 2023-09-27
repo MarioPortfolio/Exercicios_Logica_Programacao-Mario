@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 2 exercicio 6</title>
+</head>
+<body>
+
+    <form action="">
+        
+        <label for="idNumero1">Insira o valor 1:</label>
+        <input type="number" id="idNumero1" name="mnNumero1" step="0.01"> <br><br>
+
+        <label for="idNumero2">Insira o valor 2:</label>
+        <input type="number" id="idNumero2" name="mnNumero2" step="0.01"> <br><br>
+
+        <label for="idOperacao"> Operação</label>
+        <select name="nmOperacao" id="idOperacao">
+            <option  value="+">Soma</option>
+            <option  value="-">Subtração</option>
+            <option  value="*">Multiplicação</option>
+            <option  value="/">Divisão</option>
+        </select>
+
+        <input type="button" value="Calcular" onclick="calcular()"> <br><br>
+
+        <output id="idOut"></output>
+
+    </form>
+
+    <script>
+
+        //Construa uma calculadora. O programa deverá receber 2 
+        //números e o caractere equivalente a um dos operadores aritméticos.
+        //Efetuar a operação aritmética correspondente e apresentar o resultado.
+
+        function calcular() {
+            
+        //entrada
+            let numero1 = Number(document.querySelector("#idNumero1").value)
+            let numero2 = Number(document.querySelector("#idNumero2").value)
+            let op = document.querySelector("#idOperacao").value
+
+            let resultado
+            
+        //processamento
+
+        switch (op) {
+            case "+":
+                resultado = numero1 + numero2
+                    break;
+
+            case "-": 
+                resultado = numero1 - numero2
+                    break; 
+                    
+            case "*": 
+                resultado = numero1 * numero2
+                    break; 
+
+            case "/": 
+                resultado = numero1 / numero2
+                    break; 
+
+            default:
+                console.log("Erro ao selecionar Operação");
+                break;        
+                    
+        }
+        
+
+        //saída
+
+        document.querySelector("#idOut").value = "Resultado: " + resultado
+
+        }
+    </script>
+ 
+
+
+    
+</body>
+</html>

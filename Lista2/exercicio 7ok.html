@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 2 exercicio 7</title>
+</head>
+<body>
+
+    <form action="">
+        
+        <label for="idSal">Informe o salário:</label>
+        <input type="number" id="idSal" name="mnSal" step="0.01"> <br><br>
+        
+        <input type="button" value="Calcular" onclick="calcularInss()"> <br><br>
+
+        <output id="idOut"></output><br><br>
+
+    </form>
+
+    <script>
+
+        // Entrar com o salário de uma pessoa e imprimir o 
+        //Salário Líquido, segundo a tabela a seguir:
+      
+
+        function calcularInss() {
+            
+        //entrada
+            let salarioBruto = Number(document.getElementById("idSal").value)
+            let out = document.getElementById("idOut")
+
+            let salarioLiquido = 0
+            let descontoInss = 0
+            
+        //processamento
+            if (salarioBruto <= 600.00) {
+                salarioLiquido = salarioBruto
+                
+            }else if(salarioBruto > 600.00 && salarioBruto <= 1200.00){
+                descontoInss = salarioBruto * 0.25
+                salarioLiquido = salarioBruto - descontoInss 
+
+            }else if(salarioBruto > 1200 && salarioBruto <= 2000.00 ) {
+                descontoInss = salarioBruto * 0.30
+                salarioLiquido = salarioBruto - descontoInss
+
+            }else if(salarioBruto > 2000.00) {
+                descontoInss = salarioBruto * 0.35
+                salarioLiquido = salarioBruto - descontoInss
+
+            }
+       
+        
+
+        //saída
+
+        out.innerText = "salario Bruto: " + salarioBruto.toFixed(2) + "\n Salário Líquido: " + salarioLiquido.toFixed(2) + "\n Descontos: " + descontoInss.toFixed(2)
+
+        }
+    </script>
+ 
+
+
+    
+</body>
+</html>
