@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 2 exercicio 9</title>
+</head>
+<body>
+
+    <form action="">
+        <fieldset>
+            <legend> Área Formas Geométricas</legend>  
+        
+                <label for="idMedida1" id="idLbMedida1">Raio</label><br>
+                <input type="number" id="idMedida1" name="mnMedida1" step="0.01"> <br><br>
+
+                <label for="idMedida2" id="idLdMedida2"></label> <br>
+                <input type="number" id="idMedida2" name="mnMedida2" step="0.01"> <br><br>
+
+                <input type="radio" name="nmFormaGeometrica" id="idCirculo" value="Circulo" onclick="habilitarCirculo()" checked>
+                <label for="idCirculo">Circulo</label> <br>
+
+                <input type="radio" name="nmFormaGeometrica" id="idRetangulo" value="retangulo" onclick="habilitarRetangulo()">
+                <label for="idRetangulo">Retângulo</label> <br>
+
+                <input type="radio" name="nmFormaGeometrica" id="idTrianguloRetangulo" value="TrianguloRetangulo" onclick="habilitarTrianguloRetangulo()">
+                <label for="idTrianguloRetangulo">Triângulo Retângulo</label> <br>
+
+                <input type="radio" name="nmFormaGeometrica" id="idTrianguloEquilatero" value="trianguloEquilatero" onclick="habilitarTrianguloEquilatero()">
+                <label for="idTrianguloEquilatero">Triângulo Equilatero</label> <br>
+                
+                <br><br>
+
+                <input type="button" id="idBtCalcular" value="Calcular Área do Circulo" onclick="calcularArea()"> <br><br>
+
+                <output id="idOut"></output><br><br>
+
+                  
+        </fieldset>
+    </form>
+
+    <script>
+
+        // Crie um programa para calcular a área das formas geométricas básicas:  
+        //a.	Círculo (pedir o raio);  
+        //b.	Retângulo (pedir a base e altura);  
+        //c.	Triangulo retângulo (pedir a base e altura);  
+        //d.	Triangulo Equilátero: pedir o lado.
+        // - O usuário deve poder escolher a forma geométrica que deseja calcular a partir de um menu.
+       
+      
+
+        function habilitarCirculo() {
+            document.getElementById("idMedida1").innerText = "Raio";
+            document.getElementById("idLdMedida2").innerText = "";
+            document.getElementById("idMedida2").disabled = true;
+            document.getElementById("idBtCalcular").value = "Calcular Area do Circuo";
+        }    
+
+        function habilitarRetangulo() {
+            document.getElementById("idLbMedida1").innerText = "Base";
+            document.getElementById("idLdMedida2").innerText = "Altura";
+            document.getElementById("idMedida2").disabled = false;
+            document.getElementById("idBtCalcular").value = "Calcular Area do Retângulo";
+        }    
+
+        function habilitarTrianguloRetangulo() {
+            document.getElementById("idLbMedida1").innerText = "Base";
+            document.getElementById("idLdMedida2").innerText = "Altura";
+            document.getElementById("idMedida2").disabled = false;
+            document.getElementById("idBtCalcular").value = "Calcular Area do Triangulo Retangulo";
+        }    
+
+        function habilitarTrianguloEquilatero() {
+            document.getElementById("idLbMedida1").innerText = "Lado";
+            document.getElementById("idLdMedida2").innerText = "";
+            document.getElementById("idMedida2").disabled = true;
+            document.getElementById("idBtCalcular").value = "Calcular Area do Triangulo Equilatero";
+        }    
+
+        function calcularArea(){
+            let area
+            let formaGeometrica = document.querySelector("input[name=nmFormaGeometrica]:checked").value
+
+            switch (formaGeometrica) {
+                case "circulo":
+                    let radio = Number(document.getElementById("IdMedida1").value)
+                    area = Math.PI * raio * raio
+                    break;
+
+                case "retangulo":
+                    let baseRet = Number(document.getElementById("IdMedida1").value)
+                    let alturaRet = Number(document.getElementById("idMedida2").value)
+                    area = baseRet * alturaRet
+                    break;
+
+                case "trianguloRetangulo":
+                    let baseTri = Number(document.getElementById("IdMedida1").value)
+                    let alturaTri = Number(document.getElementById("idMedida2").value)
+                    area = (baseTri * alturaTri)/2
+                    break;
+
+                case "trianguloEquilatero":
+                    let lado = Number(document.getElementById("IdMedida1").value)
+                    area = ((lado ** 2) * Math.sqrt(3) )/4
+                    break;
+
+
+        }
+
+                      
+        //saída
+
+        document.getElementById("idOut").value = "Area: " + area.toFixed(2) + "cm2"
+    }
+
+    </script>
+ 
+
+
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 3 exercicio 1</title>
+</head>
+<body>
+
+    <form action="">
+        
+        <label for="idAnoNasc">Ano Nascimento:</label> <br>
+        <input type="number" id="idAnoNasc" name="nmAnoNasc"> <br><br>
+
+        <button type="button" onclick="testarIdade()">Posso votar?</button> <br><br>
+        <output id="idOut"></output>
+    </form>
+
+    <script>
+
+        function testarIdade() {
+           
+
+            let anoNasc = Number(document.querySelector("#idAnoNasc").value)
+            let saida = document.querySelector("#idOut")
+            let anoAtual = 2023
+
+            let idade = anoAtual - anoNasc
+            console.log("idade: " + idade)
+
+            if (idade >= 16) {
+                console.log("Entrou no true do if")
+                saida.value = "Sua idade é: " + idade + " Você já pode votar"
+            } else {
+                console.log("Entrou no false do if")
+                saida.value = "Sua idade é: " + idade + " Você ainda não pode votar"
+            }  
+
+        }
+    </script>
+ 
+
+
+    
+</body>
+</html>
