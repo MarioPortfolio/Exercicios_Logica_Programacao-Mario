@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 3 exercicio 1</title>
+</head>
+<body>
+
+    <form action="">
+        
+        <label for="idAno">Informe o ano: </label> 
+        <input type="number" id="idAno" name="nmAno"> <br><br>
+        <button type="button" onclick="testarBissexto()">Testar Bissexto</button> <br><br>
+        <output id="idOut"></output>
+    </form>
+
+    <script>
+        //Faça um algoritmo que leia um determinado ano e mostre se ele é ou não BISSEXTO.
+        // ano precisa ser divisivel por 4, mas não divisivel por 100
+        // ano divisivel por 400
+
+        //Entreda
+        function testarBissexto() {
+            let ano = Number(document.querySelector("#idAno").value)
+            let msn
+            let resto4    = ano % 4
+            let resto100  = ano % 100
+            let resto400  = ano % 400
+            
+        //Processamento
+
+        if (resto4 == 0 && resto100 != 0 || resto400 == 0) {
+            msn = "O ano é bissexto" 
+        } else {
+            msn =  "O ano não é bissexto"
+        }
+            
+        //Saída
+        document.getElementById("idOut").value = msn
+        }
+    </script>
+ 
+
+
+    
+</body>
+</html>

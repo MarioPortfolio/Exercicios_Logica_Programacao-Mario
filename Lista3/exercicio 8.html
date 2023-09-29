@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 3 exercicio 1</title>
+</head>
+<body>
+
+    <form action="">
+        
+        <label for="idDistancia">Informe a distancia:</label> <br>
+        <input type="number" id="idDistancia" name="nmDistancia"> <br><br>
+        
+        
+      
+        <button type="button" onclick="CalcularPrecoViagem()">Calcule o valor da viagem</button> <br><br>
+        <output id="idOut"></output>
+    </form>
+
+    <script>
+
+        function CalcularPrecoViagem() {
+           
+
+            let distancia = Number(document.querySelector("#idDistancia").value)
+            let saida = document.querySelector("#idOut").value
+            let valorViagem
+            
+            if (distancia > 200) {
+                let distanciaMaior200 = distancia - 200
+                valorViagem = (200 * 0.5) + (distanciaMaior200 * 0.45)
+                
+            } else {
+                valorViagem = (200 * 0.5)
+            }  
+     
+           saida.value = "valor da viegem" + valorViagem
+        }
+    </script>
+ 
+
+
+    
+</body>
+</html>

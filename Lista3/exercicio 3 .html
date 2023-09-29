@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 3 exercicio 1</title>
+</head>
+<body>
+
+    <form action="">
+        
+        <label for="idNome">Insera seu nome:</label> 
+        <input type="text" id="idNome" name="nmNome"> <br><br>
+
+        <label for="idNota1">Insira sua primeira nota:</label> 
+        <input type="number" id="idNota1" name="nmNota1" step="0.01"> <br><br>
+
+        <label for="idNota2">Insira sua segunda nota:</label> 
+        <input type="number" id="idNota2" name="nmNota2" step="0.01"> <br><br>
+
+        <button type="button" onclick="testarMedia()">Calcular Média</button> <br><br>
+       
+        <output id="idOut"></output>
+    </form>
+
+    <script>
+
+        function testarMedia() {
+           
+
+            let nome = String(document.querySelector("#idNome").value)
+            let nota1 = String(document.querySelector("#idNota1").value)
+            let nota2 = String(document.querySelector("#idNota2").value)
+            let situacao
+            let media = (nota1 + nota2)/2
+
+            if (media > 7) {
+                situacao = "Aprovado"
+
+            } else {
+                situacao = "Reprovado"
+            }
+        
+            document.getElementById("idOut").innerText = nome + ". Sua nota é: " + media + " Você está aprovado"
+        }
+    </script>
+ 
+
+
+    
+</body>
+</html>

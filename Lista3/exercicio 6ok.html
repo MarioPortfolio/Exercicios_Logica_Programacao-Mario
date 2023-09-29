@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 3 exercicio 1</title>
+</head>
+<body>
+
+    <form action="">
+        
+        <label for="idAnoNasc">Ano Nascimento:</label> <br>
+        <input type="number" id="idAnoNasc" name="nmAnoNasc"> <br><br>
+
+        <button type="button" onclick="testarIdade()">Testar Alistamento</button> <br><br>
+        <output id="idOut"></output>
+    </form>
+
+    <script>
+
+        function testarIdade() {
+           
+
+            let anoNasc = Number(document.querySelector("#idAnoNasc").value)
+            let saida = document.querySelector("#idOut")
+            let date = new Date()
+            let date2 = new Date('2021-03-25T00:00:00')
+            console.log(date2)
+            console.log((date.getMonth() + 1));
+            console.log((date.getUTCDay()));
+            console.log((date.getDate()));
+
+            
+            //let anoAtual = 2023
+            let diferencaIdadeAlistamento
+            let idade = anoAtual - anoNasc
+            //console.log("idade: " + idade + " anos")
+
+            if (idade >= 18) {
+                //console.log("Entrou no true do if")
+                diferencaIdadeAlistamento = idade - 18
+                saida.value = "Você já é maior de idade, deveria ter se alistado a " + diferencaIdadeAlistamento + " anos"
+            } else {
+                diferencaIdadeAlistamento =  18 - idade
+                //console.log("Entrou no false do if")
+                saida.value = "Você já é menor de idade, faltam" + diferencaIdadeAlistamento + " anos"
+            }  
+
+        }
+    </script>
+ 
+
+
+    
+</body>
+</html>

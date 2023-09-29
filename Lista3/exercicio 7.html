@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 3 exercicio 1</title>
+</head>
+<body>
+
+    <form action="">
+
+        <label for="idValorCompra">Valor Compra:</label>
+        <input type="number" id="idValorCompra" name="nmValorCompra"> <br><br>
+        
+        <input type="radio" name="nmSexo" id="IdMasc" value="masc" checked>
+        <label for="IdMasc">Masculino</label>
+
+        <input type="radio" name="nmSexo" id="IdFem" value="fem">
+        <label for="IdFem">Feminino</label>
+        <br><br>
+        <button type="button" onclick="testarValorCompra()">Calcule o valor da compra</button> <br><br>
+        <output id="idOut"></output>
+    </form>
+
+    <script>
+
+        function testarValorCompra() {
+        
+            //Numa promoção exclusiva para o Dia da Mulher, uma loja quer dar 
+            //descontos para todos, mas especialmente para mulheres. 
+            //Faça um programa que leia nome, sexo e o valor das compras do 
+            //cliente e calcule o preço com desconto. Sabendo que:
+
+        //entrada
+            let valorCompraBruto = Number(document.querySelector("#idValorCompra").value)
+            let sexo = document.querySelector("input[name=nmSexo]:checked").value
+            let desconto 
+            
+            if (sexo == "femi") {
+                desconto = 0.13
+                saida.value = "Você ultrapassou o limite de velocidade - Multa: " + multa.toFixed(2)
+            } else {
+                desconto = 0.05 = "Parabéns, você se manteve no limite de valocidade"
+            }  
+     
+            let idValorCompraLiquido = valorCompraBruto - (valorCompraBruto * desconto)
+            document.getElementById("idOut").value = "Valor de compra com desconto: " + idValorCompraLiquido
+        }
+    </script>
+ 
+
+
+    
+</body>
+</html>

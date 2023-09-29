@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 4 exercicio 1</title>
+</head>
+<body>
+
+    <form action="">
+
+        <label for="idValor">Insira um número qualquer e positivo, para determinar o intervalo da contagem</label>
+        <input type="number" id="idValor" name="nmValor">
+
+        <input type="button" value="Iniciar Contagem" onclick="testar()"><br><br>
+
+        <output id="idOut"></output>
+
+    </form>
+
+    <script>
+        // Faça um algoritmo que pergunte ao usuário um número 
+        //inteiro e positivo qualquer e mostre uma contagem até esse valor:  
+        //  Ex: Digite um valor: 77  
+        // Contagem: "Inicio 1 2 3 4 5 6 7 ... 75 76 77 Acabou!"          
+
+        function testar() {
+
+        //Entrada
+        let numero = Number(document.querySelector("#idValor").value)
+        let out = document.querySelector("#idOut")
+
+        //Processamento
+        if (numero >= 1 && Number.isInteger(numero)) {
+            //document.write("Inicio da contagem");
+            out.value = "O número é inteiro e positivo. A contagem se iniciará..."
+            console.log(numero)
+        } else {
+            out.value = "O número não é inteiro e positivo. Tente novamente."    
+        }
+
+
+        }    
+        //Saída
+        out.value = numero
+
+        // inicio da contagem
+       // console.log("Início da contagem")
+
+        //Estrutura de repetição para contar de 5 a 12
+        //for (let i = 1; i <= numero; i++) {
+       //     console.log(idOut);
+       // }
+
+        // fim da contagem
+       // console.log("Acabou!")
+
+    </script>
+ 
+
+
+    
+</body>
+</html>

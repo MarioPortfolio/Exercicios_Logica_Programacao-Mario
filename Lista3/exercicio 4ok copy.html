@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 3 exercicio 1</title>
+</head>
+<body>
+
+    <form action="">
+        
+        <label for="idNumero">Número:</label> 
+        <input type="number" id="idNumero" name="nmNumero"> <br><br>
+        <button type="button" onclick="testarPar()">Testar Par</button> <br><br>
+        <output id="idOut"></output>
+    </form>
+
+    <script>
+
+        function testarPar() {
+            let numero = document.querySelector("#idNumero").value
+            let msn
+            let resto = numero % 2
+            
+
+            if (resto == 0) {
+                msn = "O número: " + numero + " é par"
+            } else {
+                msn = "O número: " + numero + " é impar"
+            }
+
+            document.getElementById("idOut").value = msn
+        }
+    </script>
+ 
+
+
+    
+</body>
+</html>
