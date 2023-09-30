@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 4 exercicio 2</title>
+</head>
+<body>
+    
+    <output id="idOut"></output>
+
+
+    <script>
+        // Faça um algoritmo que mostre na tela a seguinte contagem:
+        // "Inicio 15 14 13 12 11 10 9 8 7 6 5 4 3 Acabou!" 
+
+        //Variaveis
+        
+        var msnIni = "inicio "
+        var msnFim = " Acabou!!!"
+        var cont = 15
+
+
+        //Estrutura de repetição 
+
+        while(cont >= 3){
+            msnIni = msnIni + cont + " - "
+            console.log(msnIni)
+            cont-- 
+
+        }
+        
+        msnIni = msnIni + msnFim
+        console.log(msnIni)
+
+        // Saida
+        document.querySelector("#idOut").value = msnIni
+
+    </script>
+ 
+
+
+    
+</body>
+</html>

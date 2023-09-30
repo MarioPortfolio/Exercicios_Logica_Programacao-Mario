@@ -7,21 +7,26 @@
 </head>
 <body>
 
+    <output id="idOut"></output>
+
         <script>
         // Escreva um programa que mostre na tela a seguinte contagem:
         // "Inicio 5 6 7 8 9 10 11 12 Acabou!". 
 
+        //Variaveis
 
-        // inicio da contagem
-        console.log("Início da contagem")
+        var msn = "Início"    
 
-        //Estrutura de repetição para contar de 5 a 12
-        for (let i = 5; i <= 12; i++) {
-            console.log(i);
+     
+        //Estrutura de repetição 
+        for (let cont = 5; cont <= 12; cont++) {
+           msn = msn + cont + " - "
         }
 
-        // fim da contagem
-        console.log("Acabou!")
+        msn = msn + "Acabou!"
+
+        // Saida
+        document.getElementById("idOut").value = msn
 
     </script>
  

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 4 exercicio 1</title>
+</head>
+<body>
+
+    <output id="idOut"></output>
+
+    <script>
+        // Crie um aplicativo que mostre na tela a seguinte contagem:
+        // "Inicio 0 4 8 12 16 20 Acabou!"     
+
+        //variaveis
+
+        var msnIni = "Início "
+        var msnFim = "Terminou!!    "
+        var cont = 0
+        
+        //Estrutura de repetição 
+
+        /* 
+        while (cont <= 20) {
+            
+            msnIni = msnIni + cont + " - "
+            cont += 4
+            console.log(cont)
+            
+        }
+        */ 
+
+        while ( cont <= 20) {
+            let restoDivPor4 = cont % 4
+            if (restoDivPor4 == 0) {
+                msnIni = msnIni + cont + " - "
+            }   
+            
+            cont++
+        }
+
+        msnIni = msnIni + msnFim
+
+        //Saida
+
+        document.getElementById("idOut").value = msnIni
+
+       
+    </script>
+ 
+
+
+    
+</body>
+</html>

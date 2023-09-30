@@ -9,7 +9,7 @@
 
     <form action="">
 
-        <label for="idValor">Insira um número qualquer e positivo, para determinar o intervalo da contagem</label>
+        <label for="idNumFim">Insira um número qualquer e positivo, para determinar o intervalo da contagem</label>
         <input type="number" id="idValor" name="nmValor">
 
         <input type="button" value="Iniciar Contagem" onclick="testar()"><br><br>
@@ -27,7 +27,7 @@
         function testar() {
 
         //Entrada
-        let numero = Number(document.querySelector("#idValor").value)
+        let numero = Number(document.querySelector("#idNumFim").value)
         let out = document.querySelector("#idOut")
 
         //Processamento

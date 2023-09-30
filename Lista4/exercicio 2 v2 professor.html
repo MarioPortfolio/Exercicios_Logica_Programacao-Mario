@@ -6,22 +6,31 @@
     <title>Lista 4 exercicio 2</title>
 </head>
 <body>
+    
+    <output id="idOut"></output>
+
 
     <script>
         // Faça um algoritmo que mostre na tela a seguinte contagem:
         // "Inicio 15 14 13 12 11 10 9 8 7 6 5 4 3 Acabou!" 
 
+        //Variaveis
+        
+        var msn = "Início"
+        var msnFim = " - Terminou!"
 
-        // inicio da contagem
-        console.log("Início da contagem")
 
-        //Estrutura de repetição para contar de 5 a 12
-        for (let i = 15; i >= 3; i--) {
-            console.log(i);
+        //Estrutura de repetição 
+
+        for (let cont = 15; cont >= 3; cont--) {
+            msn = msn + " - " + cont
         }
+        
+        msn = msn + msnFim 
+        
 
-        // fim da contagem
-        console.log("Acabou!")
+        // Saida
+        document.querySelector("#idOut").value = msn
 
     </script>
  
