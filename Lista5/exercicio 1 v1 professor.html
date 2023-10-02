@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 2 exercicio 2</title>
+</head>
+<body>
+
+    <output id="idOut"></output>
+
+    <script>
+    // Crie um programa que leia os valores inicial e final de um intervalo
+    // e imprima todos os números primos contidos no intervalo 
+    //-----------------------------------------------//
+        
+
+    function isPrimo(number) {
+        if (number <= 1) {
+            return false;
+        }
+        if (numer <= 3) {
+            return true;
+        }
+        if (number % 2 === 0 || number % 3 === 0){
+            return false;
+        }
+        let i = 5;
+        while (i * i <= number) {
+            if (number % i === 0 || number % (i + 2) === 0) {
+                return false;
+            }
+            i += 6;
+        }
+        return true;
+
+    }
+
+    //Variaveis 
+
+    var msn = "Início "
+    var cont = 5
+    
+    //Estrutura de repetição para contar de 5 a 12
+    while (cont <= 12) {
+        msn =  msn + cont + " - "
+        cont++
+        
+
+    }
+    msn = msn + "Acabou!"
+
+    // Saida
+    
+    document.getElementById("idOut").value = msn
+
+    </script>
+ 
+
+
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E</title>
+</head>
+
+    <output id="idOut"></output>
+
+<body>
+
+    <script>
+        // Desenvolva um programa que faça o sorteio de 20 números entre 0 e 10 e mostre na tela:
+        //a) Quais foram os números sorteados  
+        //b) Quantos números estão acima de 5  
+        //c) Quantos números são divisíveis por 3 
+
+        var out = document.getElementById("idOut")
+        var msn = "" // colar um vazio para iniciar e não mostrar NaNN
+
+        for (let index = 0; index < 20; index++) {
+            var numSorteado = parseInt(Math.random() * 10)
+            msn = msn + numSorteado + " "
+            
+            
+        }
+            
+        out.value = msn  
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 4 exercicio 1</title>
+</head>
+<body>
+
+
+    <output id="idOut"></output>
+
+    <script>
+        // Desenvolva um programa que mostre na tela a seguinte contagem: 
+        // "Inicio 100 95 90 85 80 ... 0 Acabou!"    
+
+
+        //Variaveis
+        
+        var msn = "Início "
+        var cont = 100
+
+
+        //Estrutura de repetição
+        
+        while (cont >= 0 ) {
+            msn = msn + cont + " "
+            //cont = cont - 5
+            cont -= 5
+        }
+
+        // Saída
+
+        msn = msn + "Acabou!!!"
+        
+        console.log(msn);
+        document.getElementById("idOut").value = msn
+
+    </script>
+ 
+
+
+    
+</body>
+</html>
