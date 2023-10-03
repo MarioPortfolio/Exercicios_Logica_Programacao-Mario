@@ -28,29 +28,21 @@
         //Entrada
             let numeroFim = Number(document.querySelector("#idNumFim").value)
             let msn = "inicio "
+            let cont = 0
 
-            //Processamento
+        //Processamento
             
-            for (let i = 1; i <= numeroFim; i++) {
-                msn = msn + i + " "
-                
-            }
-            
-        msn = msn + "Acabou"
+        while (cont != numeroFim) {
+            cont++
+            msn = msn + cont + " "
+        }
+
+        msn = msn + "Acabou usando while!!!"
            
         //Saída
         document.getElementById("idOut").value = msn
         }
-        // inicio da contagem
-       // console.log("Início da contagem")
-
-        //Estrutura de repetição para contar de 5 a 12
-        //for (let i = 1; i <= numero; i++) {
-       //     console.log(idOut);
-       // }
-
-        // fim da contagem
-       // console.log("Acabou!")
+     
 
     </script>
  
