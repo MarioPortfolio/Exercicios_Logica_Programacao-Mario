@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 6 Exercicio 1</title>
+</head>
+    
+<body>
+
+    <form action="">
+
+        <label for="idNome">Insira um nome: </label> <br>
+        <input type="text" id="idNome" name="nmNome" required> <br> <br>
+        <button type="button" onclick="adicionarNome()">Adicionar nome</button>
+
+    </form>
+    
+    <script>
+
+        //6. Faça um programa que leia "n" nomes de pessoas e guarde-os em um vetor. No
+        //final, mostre uma listagem com todos os nomes informados, na ordem inversa
+        //daquela em que eles foram informados.
+
+
+        //let nome = document.getElementById("IdNome")
+
+
+        //Array para armazenar nome
+        let nomeArray = [];
+        
+
+
+        //Função para adicionar nome a lista
+        function adicionarNome() {
+            nomeArray
+            let nomeEntrada = document.getElementById("idNome").value;
+            
+
+           // for (let i = 0; i < nome.length; i++) {
+           //     nome[i] = i;          
+           // }
+           //console.log(nomeSaida); 
+           
+           console.log("Nome digitado: " + nomeEntrada);
+        }    
+        
+        //console.log("Mostra o nome" + nomeEntrada);
+        
+    </script>
+    
+</body>
+</html>
