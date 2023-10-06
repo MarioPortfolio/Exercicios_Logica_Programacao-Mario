@@ -23,25 +23,17 @@
         //daquela em que eles foram informados.
 
 
-        //let nome = document.getElementById("IdNome")
-
-
-        //Array para armazenar nome
-        let nomeArray = [];
+        
+        
+        let nomeArray = []; // enquanto eu não atualizar a tela o conteudo continua
         
 
-
-        //Função para adicionar nome a lista
         function adicionarNome() {
-            nomeArray
-            let nomeEntrada = document.getElementById("idNome").value;
-            
-
-           // for (let i = 0; i < nome.length; i++) {
-           //     nome[i] = i;          
-           // }
-           //console.log(nomeSaida); 
+            let nomeTela = document.getElementById("idNome").value;
            
+            nome.push(nomeTela)    
+
+                     
            console.log("Nome digitado: " + nomeEntrada);
         }    
         

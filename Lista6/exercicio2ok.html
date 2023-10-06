@@ -7,12 +7,31 @@
 </head>
     
 <body>
+
+    <script>
+
+        let numero = [];
+        let numInv = 9;
+        let msn = "Versão 2: "
+
+        for (let index = 0; index < 10; index++) {
+        
+        numero[index] = numInv--;
+        msn = msn + numero[index] + " - "
+       
+
+       }
+
+       console.log(msn) // string concatenada com numero = string
+    </script>
+
+
     
     <script>
 
         //Crie um programa que preencha automaticamente 
-        //(usando lógica, não apenas atribuindo diretamente) 
-        //um vetor numérico com 10 posições conforme abaixo:  
+        //(usando lógica, não apenas atribuindo diretamente) msn = msn + i + " - " 
+        //um vetor numérico com 10 posições conforme abaixo:  msn = msn + "Acabou!"  
 
         //|  9 |  8 |  7 |  6 |  5 |  4 |  3 |  2 |  1 |  0 |
         //|----|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
@@ -31,6 +50,9 @@
         
         
     </script>
+
+
+
     
 </body>
 </html>
