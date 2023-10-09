@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lsita 2 ecercicio 9</title>
+</head>
+<body>
+    <script>
+        /*
+        9. Crie um programa para calcular a área das formas geométricas básicas:  
+        a.	Círculo (pedir o raio);  
+        b.	Retângulo (pedir a base e altura);  
+        c.	Triangulo retângulo (pedir a base e altura);  
+        d.	Triangulo Equilátero: pedir o lado.
+        - O usuário deve poder escolher a forma geométrica que deseja calcular a partir de um menu.
+        */
+        
+    </script>
+
+    <form action="">
+        <fieldset>
+            <legend>Circulo</legend>
+            <label for="idRaio">Raio</label> <br>
+            <input type="number" id="idRaio" name="nmRaio" step="0.01"> <br><br>
+
+            <input type="button" value="Calcular Área do Circulo" onclick="CalcularAreaCirculo()"> <br><br>
+            <output id="idOutCirculo"></output>
+        </fieldset>
+    
+
+        <fieldset>
+            <legend>Retângulo</legend>
+            <label for="idBase">Base</label> <br>
+            <input type="number" id="idBase" name="nmBase" step="0.01"> <br><br>
+
+            <label for="IdAltura">Altura</label> <br>
+            <input type="number" id="IdAltura" name="nmAltura" step="0.01"> <br> <br>
+
+            <input type="button" value="Calcular Área do Retângulo" onclick="CalcularAreaRetangulo()"> <br><br>
+            <output id="idOutRetangulo"></output>
+        </fieldset>
+
+        <fieldset>
+            <legend>Triângulo Retângulo</legend>
+            <label for="idBaseTr">Base</label> <br>
+            <input type="number" id="idBaseTr" name="nmBaseTr" step="0.01"> <br><br>
+
+            <label for="IdAlturaTr">Altura</label> <br>
+            <input type="number" id="IdAlturaTr" name="nmAlturaTr" step="0.01"> <br> <br>
+
+            <input type="button" value="Calcular Área do Triangulo Retângulo" onclick="CalcularAreaTrianguloRetangulo()"> <br><br>
+            <output id="idOutTrianguloRetangulo"></output>
+        </fieldset>
+
+        <fieldset>
+            <legend>Triângulo Equilátero</legend>
+            <label for="idLado">Lado</label><br>
+            <input type="number" id="idLado" name="nmLado" step="0.01"> <br><br>
+
+            <input type="button" value="Calcular Área Triangulo Equilatero" onclick="CalcularAreaTrianguloEquilatero()"> <br><br>
+            <output id="idOutTrianguloEquilatero"></output>
+        </fieldset>
+    </form>
+
+    <script>
+        function CalcularAreaCirculo() {
+            //Capturar elementos da tela
+            let raio = Number(document.getElementById("idRaio").value)
+
+            //Processamento
+            let area = Math.PI * raio * raio
+
+            // Saída
+            document.getElementById("idOutCirculo").value = "Área: " + area.toFixed(2) + "cm²"
+
+        }
+
+        function CalcularAreaRetangulo() {
+            //Capturar elemento da tela
+            let base = Number(document.getElementById("idBase").value)
+            let altura = Number(document.getElementById("IdAltura").value)
+
+            //Processamento
+            let area = base * altura
+
+            //Saída
+            document.getElementById("idOutRetangulo").value = "Área: " + area.toFixed(2) + " cm². "
+
+        }
+
+        function CalcularAreaTrianguloRetangulo() {
+            //Capturar elemento da tela
+
+            let base = Number(document.getElementById("idBaseTr").value)
+            let altura = Number(document.getElementById("IdAlturaTr").value)
+
+            
+            //Processamento
+            let area = (base * altura)/2
+                        
+            //Saída
+            document.getElementById("idOutTrianguloRetangulo").value = "Área do Retangulo: " + area.toFixed(2) + " cm²."
+        }
+
+        function CalcularAreaTrianguloEquilatero() {
+            //Capturar elemento da tela
+            
+            //Processamento
+            let area = base * altura
+
+            //Saída
+            
+        }
+    </script>
+
+    
+</body>
+</html>
