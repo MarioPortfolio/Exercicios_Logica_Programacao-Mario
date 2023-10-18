@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Lista de dados (seleção de item) -->
+    <label for="idFrutas">Frutas:</label><br>
+    <input list="idFrutas">
+    <datalist id="idFrutas"></datalist>
+
+    <script>
+
+        var frutas = ["tomate", "morango", "limão", "Abacaxi", "Pêra", "Uva"];
+        var datalist = document.getElementById('idFrutas');
+
+        for (var i = 0; i < frutas.length; i++) {
+            var option = document.createElement("option");
+            option.value = frutas[i];
+            option.id = i;
+            datalist.appendChild(option);            
+        }
+
+        /*
+            Para cada elemento de frutas, criar um option no datalist idFrutas;
+            O elemento deve constar na propriedade innerText e sua respectiva posição 
+            deve ser posta no id do Option, conforme exemplo acima (veja no HTML)
+        */
+
+    </script>
+</body>
+
+</html>
