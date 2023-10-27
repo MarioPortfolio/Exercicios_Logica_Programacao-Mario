@@ -13,9 +13,11 @@
     <input list="idFrutas">
     <datalist id="idFrutas"></datalist>
 
+     
+
     <script>
 
-        var frutas = ["tomate", "morango", "limão", "Abacaxi", "Pêra", "Uva"];
+        /*var frutas = ["tomate", "morango", "limão", "Abacaxi", "Pêra", "Uva"];
         var datalist = document.getElementById('idFrutas');
 
         for (var i = 0; i < frutas.length; i++) {
@@ -25,12 +27,24 @@
             datalist.appendChild(option);            
         }
 
-        /*
+        
             Para cada elemento de frutas, criar um option no datalist idFrutas;
             O elemento deve constar na propriedade innerText e sua respectiva posição 
             deve ser posta no id do Option, conforme exemplo acima (veja no HTML)
         */
 
+        var frutas = ["tomate", "morango", "limão", "Abacaxi", "Pêra", "Uva"]
+
+        let datalist = document.getElementById("idFrutas")
+            frutas.forEach(function(element, index){
+                let option = document.createElement("option")
+                option.innerText = element
+                option.id = index
+                datalist.appendChild(option)
+            })           
+
+
+        
     </script>
 </body>
 

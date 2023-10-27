@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Relatório de Menores de Idade</title>
+</head>
+<body>
+    <form action="">
+        <div>
+            <input type="text" id="idNome" placeholder="Nome...">
+        </div>
+        <div>
+            <input type="number" id="idIdade" placeholder="Idade">
+        </div>
+        <div>
+            <input type="button" value="Cadastrar" id="idBtCadastrar">
+            <input type="button" value="Relatório" id="idBtRelatorio">
+        </div>
+        <div>
+            <output id="idOut"></output>
+        </div>
+    </form>
+
+    <script>
+        var nomes = []
+        var idades = []
+        var btCadastrar = document.getElementById("idBtCadastrar")
+        var btRelatorio = document.getElementById("idBtRelatorio")
+        var saida = document.getElementById("idOut")
+
+        btCadastrar.onclick = function () {
+            adquirirDadosTela()
+            document.getElementById("idNome").value = ""
+            document.getElementById("idIdade").value = ""
+        }
+
+        btRelatorio.onclick = function () {
+            // Use o método filter para encontrar os índices de idades menores que 18
+            var menoresDeIdadeIndices = idades.map((idade, index) => idade < 18 ? index : -1).filter(index => index !== -1);
+            
+            // Use o método map para obter os nomes das pessoas menores de idade com base nos índices
+            var nomesMenorDeIdade = menoresDeIdadeIndices.map(index => nomes[index]);
+            
+            // Use o método reduce para formatar a saída
+            var relatorio = nomesMenorDeIdade.reduce((resultado, nome, index) => {
+                if (index === 0) {
+                    return resultado + nome;
+                } else {
+                    return resultado + ', ' + nome;
+                }
+            }, '');
+
+            if (nomesMenorDeIdade.length > 0) {
+                saida.value = "Menores de Idade: " + relatorio;
+            } else {
+                saida.value = "Não há menores de idade cadastrados.";
+            }
+        }
+
+        function adquirirDadosTela() {
+            let nome = document.getElementById("idNome").value
+            let isNomeValido = consistirNome(nome)
+            if (isNomeValido) {
+                saida.value = ""
+                saida.classList.remove("alerta")
+
+                let idade = document.getElementById("idIdade").value
+                let isIdadeValida = consistirIdade(idade)
+                if (isIdadeValida) {
+                    idades.push(idade)
+                    nomes.push(nome)
+                    saida.value = ""
+                    saida.classList.remove("alerta")
+                }
+            }
+        }
+
+        function consistirNome(nome) {
+            if (nome == "" || nome == " ") {
+                saida.value = "Preenchimento obrigatório: Campo Nome"
+                saida.classList.add("alerta")
+                document.getElementById("idNome").focus()
+                return false
+            }
+            return true 
+        }
+
+        function consistirIdade(idade) {
+            if (idade < 0 || idade > 130 || idade == "") {
+                saida.value = "Idade inválida"
+                saida.classList.add("alerta")
+                document.getElementById("idIdade").focus()
+                return false
+            } 
+            return true 
+        }
+    </script>
+</body>
+</html>

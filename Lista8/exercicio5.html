@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--
+        5. Refatore o exercício L7E5, corrigindo o método de ordenação dos botões 
+        "idOrdemCresSort" e "idOrdemDecresSort" de forma que a sequencia numérica 
+        do vetor num[] seja ordenada corretamente em ordem crescente e decrescente 
+        respectivamente. 
+
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <div>
+            <input type="number" id="idNum" placeholder="Número...">
+        </div>
+        <div>
+            <input type="button" id="idIncluir" value="Incluir">
+            <input type="button" id="idOrdemCres" value="Ordem Crescente Bubble">
+            <input type="button" id="idOrdemDecres" value="Ordem Decrescente Bubble">
+            <input type="button" id="idOrdemCresSort" value="Ordem Crescente Sort Met.">
+            <input type="button" id="idOrdemDecresSort" value="Ordem Decrescente Sort Met.">
+        </div>
+        <div>
+            <output id="idOut"></output>
+        </div>
+    </form>
+    <script>
+        var num = [];
+        var btIncluir = document.getElementById("idIncluir");
+        var btOrdemCres = document.getElementById("idOrdemCres");
+        var btOrdemDecres = document.getElementById("idOrdemDecres");
+        var btOrdemCresSort = document.getElementById("idOrdemCresSort");
+        var btOrdemDecresSort = document.getElementById("idOrdemDecresSort");
+        var saida = document.getElementById("idOut");
+
+        btIncluir.onclick = function () {
+            num.push(Number(document.getElementById("idNum").value));
+            console.table(num);
+        };
+
+        btOrdemCres.onclick = function () {
+            var trocou = true;
+            while (trocou) {
+                trocou = false;
+                for (let i = 0; i < num.length - 1; i++) {
+                    if (num[i] > num[i + 1]) {
+                        let aux = num[i];
+                        num[i] = num[i + 1];
+                        num[i + 1] = aux;
+                        trocou = true;
+                    }
+                }
+            }
+            saida.value = num.toString();
+        };
+
+        btOrdemDecres.onclick = function () {
+            var trocou = true;
+            while (trocou) {
+                trocou = false;
+                for (let i = 0; i < num.length - 1; i++) {
+                    if (num[i] < num[i + 1]) {
+                        let aux = num[i];
+                        num[i] = num[i + 1];
+                        num[i + 1] = aux;
+                        trocou = true;
+                    }
+                }
+            }
+            saida.value = num.toString();
+        };
+
+        btOrdemCresSort.onclick = function () {
+            num = num.sort((a, b) => a - b);
+            saida.value = num.toString();
+        };
+
+        btOrdemDecresSort.onclick = function () {
+            num = num.sort((a, b) => a - b); // Ordena em ordem crescente
+            num = num.reverse(); // Inverte a ordem
+            saida.value = num.toString();
+        };
+    </script>
+
+
+</body>
+
+</html>
