@@ -11,24 +11,34 @@
       <h1>Casa de Câmbio</h1>
     </header>
     <section>
-      <div id="idMensagem">Faço sua conversão de forma gratuita...</div>
+      <div id="idMensagem">Faça sua conversão de forma gratuita...</div>
 
       <div id="idForm">
-        <!--Lista de moedas-->
+        <!--Lista de moedas 1-->
         <input list="idMoedaEntrada" placeholder="Escolha a moeda..." />
           <datalist id="idMoedaEntrada"></datalist>
 
-        <label for=""> <==> </label>
+          <label for=""> <==> </label>
 
-        <input type="number" name="nmMoeda1" id="idMoeda1" placeholder="Moeda 2"/>
+        <!--Lista de moedas 2--> 
+        <input list="idMoedaEntrada" placeholder="Escolha a moeda..." />
+          <datalist id="idMoedaEntrada"></datalist>
 
         <br><br>
 
         <input type="number" placeholder="Valor convertido" />
 
         <br><br>
+        <!--Botão gerar moeda-->
         <input type="button" value="Lista de Moedas Banco Central" id="idBtCapMoeda"/>
+
+        <!--Botão Converter moeda-->
         <input type="button" value="Converter Moeda" id="idBtConverter"/>
+
+        <br><br>
+        <!--Valor convervido--> 
+        <output id="idValorConvertido">Valor Convertido</output>
+
       </div>
     </section>
     <footer>

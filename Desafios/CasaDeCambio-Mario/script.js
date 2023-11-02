@@ -13,12 +13,20 @@ btCapMoeda.onclick = function () {
 
         moedas.value.forEach(moeda => {
             let option = document.createElement('option');
-            option.value = moeda.simbolo + '(' + moeda.nomeFormato + ')'; 
+            option.value = moeda.simbolo + '(' + moeda.nomeFormatado + ')'; 
             listaMoedas.appendChild(option);          
         });
     })
     xhr.send();
 }
+
+    let adicionarMoedas = document.getElementById('idBtCapMoeda');
+    adicionarMoedas.addEventListener('click', function (e) {
+        e.preventDefault();
+        console.log('Passou aqui')
+        buscarMoedas();
+    });
+
 
 
 
