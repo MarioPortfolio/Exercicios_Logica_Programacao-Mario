@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hora do dia</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Casa de Câmbio</h1>
+    </header>
+    <section>
+      <div id="idMensagem">Faço sua conversão de forma gratuita...</div>
+
+      <div id="idForm">
+        <!--Lista de moedas-->
+        <input list="idMoedaEntrada" placeholder="Escolha a moeda..." />
+          <datalist id="idMoedaEntrada"></datalist>
+
+        <label for=""> <==> </label>
+
+        <input type="number" name="nmMoeda1" id="idMoeda1" placeholder="Moeda 2"/>
+
+        <br><br>
+
+        <input type="number" placeholder="Valor convertido" />
+
+        <br><br>
+        <input type="button" value="Lista de Moedas Banco Central" id="idBtCapMoeda"/>
+        <input type="button" value="Converter Moeda" id="idBtConverter"/>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; Casa de Câmbio XPTO</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
