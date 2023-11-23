@@ -14,30 +14,66 @@
       <div id="idMensagem">Faça sua conversão de forma gratuita...</div>
 
       <div id="idForm">
+
+        <!--Data-->
+        <input type="date" name="nmData" id="idData">
+        <br>
+        <!-------------------------------------------------------->
+
         <!--Lista de moedas 1-->
         <input list="idMoedaEntrada" placeholder="Escolha a moeda..." />
           <datalist id="idMoedaEntrada"></datalist>
 
-          <label for=""> <==> </label>
+        <input type="number" name="" id="idValorMoeda1" placeholder="Valor da moeda 1">
+        <datalist id="idValorMoeda1"></datalist>
+        <!-------------------------------------------------------->
+
+        <br>
+        <label for=""> <==> </label>
+        <br>
+
+        <!-------------------------------------------------------->
+
 
         <!--Lista de moedas 2--> 
         <input list="idMoedaEntrada" placeholder="Escolha a moeda..." />
           <datalist id="idMoedaEntrada"></datalist>
+        <input type="number" name="" id="idValorMoeda2" placeholder="Valor da moeda 2">
+       
+        <!-------------------------------------------------------->
 
         <br><br>
 
+        <!--Radios button Compra e Vendar--> 
+        <input type="radio" name="nmRadios" id="idRadioComprar">
+        <label for="idRadioComprar">Comprar moeda</label>
+
+        <input type="radio" name="nmRadios" id="idRadioVender">
+        <label for="idRadioVender">Vender moeda</label>
+        <!-------------------------------------------------------->
+        <br><br>
+
+        <!--Valor convertido-->
         <input type="number" placeholder="Valor convertido" />
+        <!-------------------------------------------------------->
 
         <br><br>
-        <!--Botão gerar moeda-->
+
+        <!--Botão gerar lista de moedas do banco central-->
         <input type="button" value="Lista de Moedas Banco Central" id="idBtCapMoeda"/>
+        <!-------------------------------------------------------->
+
+
 
         <!--Botão Converter moeda-->
         <input type="button" value="Converter Moeda" id="idBtConverter"/>
+        <!-------------------------------------------------------->
 
         <br><br>
+
         <!--Valor convervido--> 
         <output id="idValorConvertido">Valor Convertido</output>
+        <!-------------------------------------------------------->
 
       </div>
     </section>

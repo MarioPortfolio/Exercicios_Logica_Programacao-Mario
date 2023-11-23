@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Aluno</title>
+    <style>
+        fieldset#bordaCadastroAluno {
+            display: block;
+            width: 50%;
+            padding: 5%;
+        }
+
+        .etiqueta {
+            display: block;
+        }
+
+        button#btEnviar {
+            display:inline-flex;
+            
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <fieldset id="bordaCadastroAluno">
+            <legend>Casdastro Aluno</legend>
+
+            <label for="idNomeCadastroNome" class="etiqueta">Nome</label>
+            <input type="text" name="nmNomeCadastroNome" id="idNomeCadastroNome" size="30">
+
+            <br><br>
+
+            <label for="idNomeCadastroSobrenome" class="etiqueta">Sobrenome</label>
+            <input type="text" name="nmNomeCadastroSobrenome" id="idNomeCadastroSobrenome" size="30">
+        
+            <br><br>
+
+            <label for="idNomeCadastroNascimento" class="etiqueta">Data de Nascimento</label>
+            <input type="text" name="nmNomeCadastroNascimento" id="idNomeCadastroNascimento" size="30">
+            
+            <br><br>
+
+            <label for="idNomeCadastroEndereco" class="etiqueta">Endereço</label>
+            <input type="text" name="nmNomeCadastroEndereco" id="idNomeCadastroEndereco" size="30">
+
+            <br><br>
+
+            <label for="idNomeCadastroMae" class="etiqueta">Nome da Mãe</label>
+            <input type="text" name="nmNomeCadastroMae" id="idNomeCadastroMae" size="30">
+
+            <br><br>
+
+            <label for="idNomeCadastroPai" class="etiqueta">Nome do Pai</label>
+            <input type="text" name="nmNomeCadastroPai" id="idNomeCadastroPai" size="30">
+
+            <br><br>
+
+            <label for="idNomeCadastroEmail" class="etiqueta">E-mail</label>
+            <input type="text" name="nmNomeCadastroEmail" id="idNomeCadastroEmail" size="30">
+
+            <br><br>
+
+            <label for="idNomeCadastroTel" class="etiqueta">Tel.</label>
+            <input type="text" name="nmNomeCadastroTel" id="idNomeCadastroTel" size="30">
+
+            <br><br>
+
+            <label for="idNomeCadastroSerie" class="etiqueta">Série</label>
+            <input type="text" name="nmNomeCadastroSerie" id="idNomeCadastroSerie" size="30">
+
+            <br><br>
+
+            <label for="idSexo">Sexo</label>
+            <br>
+            <input type="radio" name="nmGenero" id="idMasculino" checked>
+            <label for="idMasculino">Masculino</label>
+            <br>
+            <input type="radio" name="nmGenero" id="idFeminino">
+            <label for="idMasculino">Femnino</label>
+
+            <br><br>
+            
+            <label for="idSexo">Necessidades Especiais</label>
+            
+            <br>
+
+            <input type="checkbox" name="nmDefiEspeciais" id="idAuditiva">
+            <label for="idAuditiva">Deficiência Auditiva</label>
+            <br>
+            <input type="checkbox" name="nmDefiEspeciais" id="idMotora">
+            <label for="idMotora">Deficiência Motora</label>
+            <br>
+            <input type="checkbox" name="nmDefiEspeciais" id="idVisual">
+            <label for="idVisual">Deficiência Visual</label>
+            <br>
+            <input type="checkbox" name="nmDefiEspeciais" id="idCerebral">
+            <label for="idCerebral">Paralisia Cerebral</label>
+            <br>
+            <input type="checkbox" name="nmDefiEspeciais" id="idAutismo">
+            <label for="idAutismo">Pertubação do Espectro Autista</label>
+            <br>
+            <input type="checkbox" name="nmDefiEspeciais" id="idForoPsico">
+            <label for="idForoPsico">Pertubação do Foro Psicológico</label>
+            <br>
+            <input type="checkbox" name="nmDefiEspeciais" id="idAprendizagem">
+            <label for="idAprendizagem">Pertubação de Aprendizagem</label>
+            <br>
+            <input type="checkbox" name="nmDefiEspeciais" id="idOutras">
+            <label for="idOutras">Outras Habilidades</label>
+
+            <br><br>
+
+            
+
+            <button id="idButtonSalvar" type="button" onclick="confirmarGet()">Salvar</button> 
+            <button id="idBtLimpaTela" type="reset">Limpar Tela</button> 
+
+            <script>
+
+                async function confirmarGet() {
+
+                    let nome = document.getElementById("idNomeCadastroNome").value
+                    console.log(nome)
+                    
+                    // faltou configuar a pasta server 20-11-23
+                    //let resposta = await fetch(`http://localhost:3001/node/Exercicio_3/FrontEnd/index.html?nmCandidato=teste`)
+                   // console.log(await resposta.json())
+                }    
+
+            </script>
+
+        </fieldset>
+    </form>
+    
+</body>
+
+</html>
+
